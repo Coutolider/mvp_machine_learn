@@ -1,3 +1,25 @@
+# MVP — Bank Marketing (UCI): Predição de Adesão a Depósito a Prazo
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Tihy55C9EVroexsQ4am-uXghDv3XHsg7?usp=sharing)
+
+Projeto de **Machine Learning** para prever a **adesão** (`yes`/`no`) de clientes a um **depósito a prazo** (term deposit) em campanhas de **telemarketing bancário**. O objetivo prático é **ranquear clientes** por probabilidade de conversão e **priorizar ligações**.
+
+---
+
+## 🧠 Visão geral
+
+- **Problema:** classificação binária desbalanceada (`y = yes/no`).
+- **Métrica principal:** **PR-AUC (Average Precision)**; apoio: **ROC-AUC**, **F1-macro**, **Accuracy**.
+- **Cuidado crítico:** a coluna `duration` (duração da ligação) é conhecida **após** a chamada; incluir no treino causaria **vazamento**. Neste projeto, **mostramos sua correlação** apenas para fins didáticos e **excluímos `duration`** da modelagem.
+
+---
+
+## 🗂️ Dados
+
+- **Dataset:** Bank Marketing (UCI).
+- **Arquivo:** `bank-full.csv` hospedado no GitHub (separador `;`).
+
+
 - **Alvo:** `y` (yes/no) → `y_bin` (1/0).
 - **Observação:** `duration` **removida** antes do treino/validação.
 
